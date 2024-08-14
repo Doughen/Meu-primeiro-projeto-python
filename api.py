@@ -1,10 +1,14 @@
+#importando as bibliotecas
+
 import requests
 import pandas as pd
 
-def api_usuarios():
+#criando uma função de usuários
+
+def api_usuarios(api_url):
 
 
-    api_url = "https://fakestoreapi.com/users/5"
+    
     response = requests.get(api_url)
     response.json()
     print("esse é o print do json")
@@ -14,4 +18,7 @@ def api_usuarios():
     print("esse é o print do dataframe")
     print(df)
 
-api_usuarios()
+#chamando a função da api
+
+api_usuarios("https://fakestoreapi.com/users/5")
+api_usuarios("https://jsonplaceholder.typicode.com/users/1")
